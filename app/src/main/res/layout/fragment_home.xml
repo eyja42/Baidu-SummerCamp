@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <ImageView
+        android:id="@+id/weather_port"
+        android:layout_width="150dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="jumpToWeather"
+        android:src="@drawable/weather_port"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/weather_degree"
+        android:layout_width="60dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="3dp"
+        android:text="18°"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="@id/weather_port"
+        app:layout_constraintTop_toTopOf="@id/weather_port" />
+
+    <TextView
+        android:id="@+id/weather_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:text="北京"
+        app:layout_constraintStart_toEndOf="@+id/weather_degree"
+        app:layout_constraintTop_toTopOf="@id/weather_port" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="135dp"
+        android:layout_height="71dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="LOGO"
+        android:textSize="47dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_input_box_basic"
+        android:hint="搜索或输入网址"
+        android:paddingLeft="6pt"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textColorHint="#95A1AA"
+        android:layout_marginLeft="2pt"
+        android:layout_marginRight="2pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feed_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="62dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBox"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="52dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@drawable/add"
+        android:onClick="jumpToNewsEdit"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
